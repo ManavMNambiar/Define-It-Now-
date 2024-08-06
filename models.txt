@@ -1,0 +1,29 @@
+1. BART:
+BART (Bidirectional and Auto-Regressive Transformers) is a more advanced model for text generation and summarization tasks.
+You can use the facebook/bart-large-cnn model, which often provides high-quality summaries.
+
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
+2. T5:
+T5 (Text-To-Text Transfer Transformer) is another powerful model for text generation tasks, including summarization.
+The t5-large or t5-3b models are particularly good for summarization.
+
+summarizer = pipeline("summarization", model="t5-large")
+
+3. Pegasus:
+Pegasus is designed specifically for abstractive summarization and has been shown to achieve state-of-the-art results on many summarization benchmarks.
+The google/pegasus-xsum model is a good choice.
+
+summarizer = pipeline("summarization", model="google/pegasus-xsum")
+
+4. Longformer:
+For longer documents, Longformer is designed to handle longer context lengths.
+The allenai/longformer-large-4096 model can be useful for summarizing lengthy texts.
+
+summarizer = pipeline("summarization", model="allenai/longformer-large-4096")
+
+5. Flan-T5:
+An extension of T5, Flan-T5 models are fine-tuned with instruction-based prompts and can perform well on summarization tasks.
+The google/flan-t5-large is a robust option.
+
+summarizer = pipeline("summarization", model="google/flan-t5-large")
